@@ -1,0 +1,260 @@
+div#main-page{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	z-index: 0;
+	background-color: #f3fce7;
+}
+
+img#banner{
+	width: 100%;
+	height: auto;
+	bottom: 0px;
+	left: 0px;
+	position: fixed;
+	z-index: 0;
+}
+
+div#draw-space {
+  width: 85%;
+  height: 40%;
+  top: 5%;
+  background-color: #c8d3a7;
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  align-items: center; /* Center the table vertically */
+}
+
+#numbers-table {
+  border-color: #7c7c7c;
+  font-size: 10px;
+  background-color: #f7f7f7;
+  z-index: 50;
+  position: relative;
+  left: 7%;
+  z-index: 1;
+}
+
+#numbers-table td {
+  width: 25px; 
+  height: 25px; 
+  text-align: center; 
+  background-color: #e1dacb;
+  opacity: 70%;
+}
+
+div#table-space {
+  width: 85%;
+  height: 40%;
+  bottom: 10%;
+  background-color: #c8bf8b;
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center;
+}
+
+table {
+  border-color: #7c7c7c;
+  font-size: 20px;
+  background-color: #f7f7f7;
+  z-index: 50;
+  margin: 0 1.3%; 
+  position: relative;
+}
+
+th{
+	font-size: 15px;
+	padding: 7px;
+}
+
+h1 {
+  font-family: "fox in the snow";
+  margin-bottom: 10px; 
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#openModalBtn {
+  border-radius: 50%;
+  background-color: #f56944; 
+  color: white; 
+  border: none; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#button-generate{
+	border: none;
+	border-radius: 50%;
+	padding: 3px;
+}
+
+#button-p{
+	border-radius: 15%;
+  	background-color: #f56944; 
+  	color: white; 
+	border: none; 
+	font-size: 13px;
+	font-style: italic;
+	padding: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#openModalBtn:hover, #button-generate:hover , #button-p:hover{
+  background-color: #fdc894; 
+}
+
+button{
+	cursor: pointer;
+}
+
+td{
+	width: 50px;
+	height: 40px;
+	background-color: #e1dacb;
+	text-align: center;
+}
+
+div#sidebar{
+	width: 15%;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	position: fixed;
+	z-index: 1;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+  	background-image: url('img/sidebar.jpg');
+}
+
+.fill {
+	margin: 15%;
+	z-index: 5555;
+	margin-bottom: 30%;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 10px 40px 10px;
+	outline: 0;
+	border: 1px solid white;
+	cursor: pointer;
+	position: relative;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+  	align-self: center; 
+  	width: 70%;
+  	font-family: "Times New Roman";
+  }
+  
+  .fill::after {
+	content: "";
+	background-color: #566d51;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	top: 7px;
+	left: 7px;
+	transition: 0.2s;
+  }
+  
+  .fill:hover::after {
+	top: 0px;
+	left: 0px;
+  }
+
+
+#add-p, #del-p{
+	width: 250px;
+	height: 30px;
+	font-size: 20px;
+	background-color: #d9d9d9;
+	border: none;
+}
+
+#number-drawn{
+	width: 200px;
+	height: 50px;
+	background-color: #f7f7f7;
+	border: none;
+	right: 14%;
+	position: relative;
+	font-size: 20px;
+	letter-spacing: 1.5px;
+	text-align: center;
+	z-index: 50;
+	opacity: 75%;
+}
+
+#button-draw-number{
+	position: relative;
+  	left: 40%;
+	background-color: transparent;
+	border: none;
+	width: 341px;
+	height: 101px;
+	z-index: 30;
+	text-align: center;
+	background-image: url(img/generatenumber.png);
+	opacity: 75%;
+}
+
+.modal {
+	z-index: 10;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+h2{
+	font-family: "Arial";
+	font-weight: lighter;
+	font-size: 11px;
+	font-style: italic;
+	margin-bottom: 5%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@font-face {
+  font-family: "fox in the snow";
+  src: url('./fonts/foxinthesnow.ttf') format('.ttf');
+}

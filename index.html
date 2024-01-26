@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name = "author" content = "Github@IsabelleQGA">
+	<meta name = "description" content = "Jogo de bingo com tema florestal.">
+	<link rel="stylesheet" type="text/css"  href="style.css"/>
+	
+    <title>Bingo! 🌲🌻</title>
+</head>
+<body>
+	<div id = "sidebar">
+		<img id = "logo" src="./img/logo.png">
+		<button type="button" class="fill" onclick="novoJogo()">New Game</button>
+	</div>
+	<div id = "main-page">
+		<div id = "draw-space">
+			<table id = "numbers-table">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td>31</td>
+					<td>32</td>
+					<td>33</td>
+					<td>34</td>
+					<td>35</td>
+					<td>36</td>
+					<td>37</td>
+					<td>38</td>
+					<td>39</td>
+					<td>40</td>
+				</tr>
+				<tr>
+					<td>41</td>
+					<td>42</td>
+					<td>43</td>
+					<td>44</td>
+					<td>45</td>
+					<td>46</td>
+					<td>47</td>
+					<td>48</td>
+					<td>49</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>51</td>
+					<td>52</td>
+					<td>53</td>
+					<td>54</td>
+					<td>55</td>
+					<td>56</td>
+					<td>57</td>
+					<td>58</td>
+					<td>59</td>
+					<td>60</td>
+				</tr>
+			</table>
+			<button id = "button-draw-number" onclick="drawNumber()"></button>
+			<input type="text" id="number-drawn" readonly="true" placeholder="sorteado"/>
+		</div>
+
+		
+		<div id="add-part" class="modal">
+			<center>
+		    <div class="modal-content">
+		        <span class="close" id="closeModalBtn">&times;</span>
+		        <h1>Add player</h1>
+					<h2>Name <br><input type="text" id="add-p-name" placeholder=" Name" maxlength="12"></h2>
+					<h2>Numbers <br><input type="text" id="add-p-numbers" placeholder=" 1, 2, 3..."> <button id = "button-generate" onclick="generatePlayersNumbers()">🎲</button> </h2>
+					<button id = "button-p" onclick="addPart()">Save</button> 
+		    </div>
+		    </center>
+		</div>
+		
+
+		<img id = "banner" src = "img/banner.png">
+		<div id = "table-space">
+			<div class="header-container">
+			    <h1>Players</h1>
+				<button id="openModalBtn">+</button>
+			</div>
+			<table id = "table1">
+				<th colspan="3" id = "h1">player</th>
+				<tr>
+					<td id = "c111"></td>
+					<td id = "c112"></td>
+					<td id = "c113"></td>
+				</tr>
+				<tr>
+					<td id = "c121"></td>
+					<td id = "c122"></td>
+					<td id = "c123"></td>
+				</tr>
+				<tr>
+					<td id = "c131"></td>
+					<td id = "c132"></td>
+					<td id = "c133"></td>
+				</tr>
+			</table>
+			<table id = "table2">
+				<th colspan="3" id = "h2">player</th>
+				<tr>
+					<td id = "c211"></td>
+					<td id = "c212"></td>
+					<td id = "c213"></td>
+				</tr>
+				<tr>
+					<td id = "c221"></td>
+					<td id = "c222"></td>
+					<td id = "c223"></td>
+				</tr>
+				<tr>
+					<td id = "c231"></td>
+					<td id = "c232"></td>
+					<td id = "c233"></td>
+				</tr>
+			</table>
+			<table id = "table3">
+				<th colspan="3" id = "h3">player</th>
+				<tr>
+					<td id = "c311"></td>
+					<td id = "c312"></td>
+					<td id = "c313"></td>
+				</tr>
+				<tr>
+					<td id = "c321"></td>
+					<td id = "c322"></td>
+					<td id = "c323"></td>
+				</tr>
+				<tr>
+					<td id = "c331"></td>
+					<td id = "c332"></td>
+					<td id = "c333"></td>
+				</tr>
+			</table>
+			<table id = "table4">
+				<th colspan="3" id = "h4">player</th>
+				<tr>
+					<td id = "c411"></td>
+					<td id = "c412"></td>
+					<td id = "c413"></td>
+				</tr>
+				<tr>
+					<td id = "c421"></td>
+					<td id = "c422"></td>
+					<td id = "c423"></td>
+				</tr>
+				<tr>
+					<td id = "c431"></td>
+					<td id = "c432"></td>
+					<td id = "c433"></td>
+				</tr>
+			</table>
+			<table id = "table5">
+				<th colspan="3" id = "h5">player</th>
+				<tr>
+					<td id = "c511"></td>
+					<td id = "c512"></td>
+					<td id = "c513"></td>
+				</tr>
+				<tr>
+					<td id = "c521"></td>
+					<td id = "c522"></td>
+					<td id = "c523"></td>
+				</tr>
+				<tr>
+					<td id = "c531"></td>
+					<td id = "c532"></td>
+					<td id = "c533"></td>
+				</tr>
+			</table>
+		</div>
+	
+
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

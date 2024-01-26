@@ -37,5 +37,5 @@
   - Para reiniciar o jogo, clicar no botão 'New Game'.
 - Exemplo do jogo em execução:
 <div align="center">
-  <img src="https://github.com/isabelleqga/Bingo/blob/main/img/exemplo.JPG?raw=true" alt="exemplo" width="80%" height="auto" style="border-radius:20px;" />
+  <img src="https://github.com/isabelleqga/bingo2023/blob/main/img/exemplo.JPG?raw=true" alt="exemplo" width="80%" height="auto" style="border-radius:20px;" />
 </div>
